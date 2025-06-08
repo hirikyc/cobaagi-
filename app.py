@@ -41,7 +41,7 @@ app.add_middleware(
 )
 
 # Load model and data
-model = tf.keras.models.load_model("app/models/food_detection.keras")
+model = tf.keras.models.load_model("models/food_detection.keras")
 with open("app/data/food_labels.pkl", "rb") as f:
     class_names = pickle.load(f)
 with open("app/data/food_origins.pkl", "rb") as f:
