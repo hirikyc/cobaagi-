@@ -42,11 +42,11 @@ app.add_middleware(
 
 # Load model and data
 model = tf.keras.models.load_model("models/food_detection.keras")
-with open("app/data/food_labels.pkl", "rb") as f:
+with open("data/food_labels.pkl", "rb") as f:
     class_names = pickle.load(f)
-with open("app/data/food_origins.pkl", "rb") as f:
+with open("data/food_origins.pkl", "rb") as f:
     food_origins = pickle.load(f)
-with open("app/models/recommendation_system.pkl", "rb") as f:
+with open("models/recommendation_system.pkl", "rb") as f:
     recommender_data = pickle.load(f)
 recommender = RestaurantRecommender(
     vectorizer=recommender_data['vectorizer'],
